@@ -1,5 +1,8 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# machine specific things go here:
+source ~/extra.zshrc
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -113,25 +116,18 @@ export EDITOR='vim'
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-# Prefer exa over ls for colors
+# Prefer exa over ls & ll for colors
 if [ -x "$(command -v exa)" ]; then
-    ls() { exa -a --long --git --header --group-directories-first "${@:2}" }
-fi
-
-
-# Prefer httpstat over curl
-if [ -x "$(command -v httpstat)" ]; then
-    curl() { httpstat "${@:1}" }
+  alias ll="ls" # ll => ls => exa
+  alias ls="exa -a --long --git --header --group-directories-first"
+else
+  alias ll="ls -al"
 fi
 
 # alises
-alias ll="ls" # ll => ls => exa
 alias vi="vim"
 alias dc="docker-compose"
 alias alpha="echo a b c d e f g h i j k m n o p q r s t u v w x y z"
-
-# aws settings
-export AWS_ASSUME_ROLE_TTL=1h
 
 # usage: dkill {string}
 dkill() {
@@ -141,6 +137,3 @@ dkill() {
 # fix moving cursor by word in intellij terminal
 bindkey "\e\eOD" backward-word
 bindkey "\e\eOC" forward-word
-
-# machine specific things go here:
-source ~/extra.zshrc
