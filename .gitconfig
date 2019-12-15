@@ -1,0 +1,18 @@
+[alias]
+	chekcout = checkout
+	co = checkout
+	lg = log --graph --date=relative --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %C(yellow)(%an %ad)%Creset'
+[branch]
+	autosetupmerge = true
+	autosetuprebase = always
+[core]
+	whitespace = -trailing-space
+[diff]
+	renames = copy
+[push]
+	default = current
+[rebase]
+	abbreviateCommands = true
+[rerere]
+	autoUpdate = false
+	enabled = false
