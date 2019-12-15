@@ -1,8 +1,8 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# machine specific things go here:
-source ~/extra.zshrc
+# machine specific setup pre zshrc:
+[ -e "$HOME/pre.zshrc" ] && source ~/pre.zshrc
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -137,3 +137,6 @@ dkill() {
 # fix moving cursor by word in intellij terminal
 bindkey "\e\eOD" backward-word
 bindkey "\e\eOC" forward-word
+
+# machine specific setup post zshrc:
+[ -e "$HOME/post.zshrc" ] && source ~/post.zshrc
