@@ -116,10 +116,11 @@ export EDITOR='vim'
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-# Prefer exa over ls & ll for colors
+# prefer exa over ls & ll for colors and better info
 if [ -x "$(command -v exa)" ]; then
   alias ll="ls" # ll => ls => exa
-  alias ls="exa -a --long --git --header --group-directories-first"
+  alias ls="exa -a --long --header --group-directories-first"
+  alias tree="exa -a --long --header --group-directories-first --tree --level 2"
 else
   alias ll="ls -al"
 fi
