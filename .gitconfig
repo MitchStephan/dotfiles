@@ -9,6 +9,8 @@
 	whitespace = -trailing-space
 [diff]
 	renames = copy
+[help]
+	autocorrect = 1
 [push]
 	default = current
 [rebase]
@@ -16,3 +18,5 @@
 [rerere]
 	autoUpdate = false
 	enabled = false
+[url "git@github.com:"]
+	insteadOf = https://github.com/
