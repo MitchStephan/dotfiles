@@ -85,16 +85,10 @@ plugins=(
   docker
   docker-compose
   zsh-autosuggestions # https://github.com/zsh-users/zsh-autosuggestions
-  zsh-syntax-highlighting # https://github.com/zsh-users/zsh-syntax-highlighting
+  # zsh-syntax-highlighting # https://github.com/zsh-users/zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-export EDITOR='vim'
 
 # User configuration
 
@@ -113,8 +107,9 @@ export EDITOR='vim'
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
+export EDITOR='vim'
+export NVM_DIR="$HOME/.nvm"
 
 # prefer exa over ls & ll for colors and better info
 if [ -x "$(command -v exa)" ]; then
@@ -129,6 +124,7 @@ fi
 alias vi="vim"
 alias dc="docker-compose"
 alias alpha="echo a b c d e f g h i j k m n o p q r s t u v w x y z"
+alias loadnvm='[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"'
 
 # usage: dkill {string}
 dkill() {
