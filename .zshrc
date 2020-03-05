@@ -85,7 +85,7 @@ plugins=(
   docker
   docker-compose
   zsh-autosuggestions # https://github.com/zsh-users/zsh-autosuggestions
-  # zsh-syntax-highlighting # https://github.com/zsh-users/zsh-syntax-highlighting
+  zsh-syntax-highlighting # https://github.com/zsh-users/zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
