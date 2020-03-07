@@ -2,8 +2,9 @@
 	chekcout = checkout
 	co = checkout
 	d = difftool
-	f = fetch --all
+	f = fetch --tags --all
 	lg = log --graph --date=relative --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %C(yellow)(%an %ad)%Creset'
+	p = pull --tags
 [branch]
 	autosetupmerge = true
 	autosetuprebase = always
@@ -13,13 +14,13 @@
 	renames = copy
 	tool = vscode
 [difftool "vscode"]
-    cmd = code --wait --diff $LOCAL $REMOTE
+	cmd = code --wait --diff $LOCAL $REMOTE
 [help]
 	autocorrect = 1
 [merge]
-    tool = vscode
+	tool = vscode
 [mergetool "vscode"]
-    cmd = code --wait $MERGED
+	cmd = code --wait $MERGED
 [push]
 	default = current
 [rebase]
