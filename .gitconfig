@@ -1,23 +1,32 @@
 [alias]
+	aliases = config --get-regexp alias
+	amend = commit --amend
+	ammend = commit --amend
+	c = clone --recursive
 	chekcout = checkout
 	co = checkout
 	d = difftool
+	delete-merged = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 	f = fetch --tags --all
 	lg = log --graph --date=relative --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %C(yellow)(%an %ad)%Creset'
-	p = pull --tags
+	p = pull --tags --recurse-submodules
+	unstage = reset HEAD
 [branch]
 	autosetupmerge = true
 	autosetuprebase = always
 [core]
+	untrackedCache = true
 	whitespace = -trailing-space
 [diff]
 	renames = copy
 	tool = vscode
 [difftool "vscode"]
 	cmd = code --wait --diff $LOCAL $REMOTE
+	prompt = false
 [help]
 	autocorrect = 1
 [merge]
+	log = true
 	tool = vscode
 [mergetool "vscode"]
 	cmd = code --wait $MERGED
