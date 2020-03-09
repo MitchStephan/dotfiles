@@ -20,11 +20,17 @@
 [diff]
 	renames = copy
 	tool = vscode
+[difftool]
+	prompt = false
 [difftool "vscode"]
 	cmd = code --wait --diff $LOCAL $REMOTE
-	prompt = false
+[fetch]
+	prune = true
+	pruneTags = true
 [help]
 	autocorrect = 1
+[include]
+	path = ~/local.gitconfig
 [merge]
 	log = true
 	tool = vscode
