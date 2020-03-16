@@ -15,6 +15,7 @@
 	autosetupmerge = true
 	autosetuprebase = always
 [core]
+	editor = code --wait
 	untrackedCache = true
 	whitespace = -trailing-space
 [diff]
