@@ -64,7 +64,7 @@ fi
 # alises
 alias vi="vim"
 alias dc="docker-compose"
-alias alpha="echo a b c d e f g h i j k m n o p q r s t u v w x y z"
+alias alpha="echo a b c d e f g h i j k l m n o p q r s t u v w x y z"
 alias loadnvm='[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"'
 
 # usage: dkill {string}
