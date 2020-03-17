@@ -37,6 +37,7 @@
 	tool = vscode
 [mergetool "vscode"]
 	cmd = code --wait $MERGED
+	keepBackup = false
 [push]
 	default = current
 [rebase]
