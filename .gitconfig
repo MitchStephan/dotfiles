@@ -15,7 +15,7 @@
 	autosetupmerge = true
 	autosetuprebase = always
 [core]
-	editor = code --wait
+	editor = vim
 	untrackedCache = true
 	whitespace = -trailing-space
 [diff]
