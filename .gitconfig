@@ -1,7 +1,7 @@
 [alias]
 	aliases = config --get-regexp alias
-	amend = commit --amend
-	ammend = commit --amend
+	amend = commit --amend --date=now
+	ammend = commit --amend --date=now
 	c = clone --recursive
 	chekcout = checkout
 	co = checkout
