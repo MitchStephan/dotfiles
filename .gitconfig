@@ -15,7 +15,7 @@
 	autosetupmerge = true
 	autosetuprebase = always
 [core]
-	editor = vim
+	editor = code --wait
 	untrackedCache = true
 	whitespace = -trailing-space
 [diff]
@@ -38,6 +38,8 @@
 [mergetool "vscode"]
 	cmd = code --wait $MERGED
 	keepBackup = false
+[pull]
+	ff = only
 [push]
 	default = current
 [rebase]
