@@ -6,7 +6,8 @@
 	chekcout = checkout
 	co = checkout
 	d = difftool
-	delete-merged = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+	delete-merged = "!git branch --merged | egrep -v '(^\\*|master|main)' | xargs git branch -d"
+	delete-unmerged = "!git branch --no-merged | egrep -v '(^\\*|master|main)' | xargs git branch -D"
 	f = fetch --tags --all
 	lg = log --graph --date=relative --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %C(yellow)(%an %ad)%Creset'
 	p = pull --tags --recurse-submodules
