@@ -54,11 +54,11 @@ export NVM_DIR="$HOME/.nvm"
 
 # prefer exa over ls & ll for colors and better info
 if [ -x "$(command -v exa)" ]; then
-  alias ll="ls" # ll => ls => exa
-  alias ls="exa -a --long --header --group-directories-first"
-  alias tree="exa -a --long --header --group-directories-first --tree --level 2"
+	alias ll="ls" # ll => ls => exa
+	alias ls="exa -a --long --header --group-directories-first"
+	alias tree="exa -a --long --header --group-directories-first --tree --level 2"
 else
-  alias ll="ls -al"
+	alias ll="ls -al"
 fi
 
 # alises
@@ -66,11 +66,23 @@ alias dotfiles="cd ~/dotfiles"
 alias vi="vim"
 alias dc="docker-compose"
 alias alpha="echo a b c d e f g h i j k l m n o p q r s t u v w x y z"
-alias loadnvm='[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"'
 
-# usage: dkill {string}
+# usage: dkill {container name excerpt}
+# example: dkill db
 dkill() {
 	docker ps -a -f status=running | grep $1 | awk '{ print $1 }' | xargs docker kill
+}
+
+# usage: tsdate {unix timestamp}
+# example: tsdate 1606857140
+tsdate() {
+	date -u -r $1 +"%Y-%m-%d %H:%M:%S %Z"
+}
+
+# usage: millidate {millisecond timestamp}
+# example: millidate 1605294533718
+millidate() {
+	date -u -r $(( ($1 + 500) / 1000 )) +"%Y-%m-%d %H:%M:%S %Z" 
 }
 
 # intellij fixes
