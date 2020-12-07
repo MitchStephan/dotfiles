@@ -73,6 +73,16 @@ dkill() {
 	docker ps -a -f status=running | grep $1 | awk '{ print $1 }' | xargs docker kill
 }
 
+
+ts() {
+  date +"%s"
+}
+
+# macos date doesn't support milliseconds
+milli() {
+  date +"%s000"
+}
+
 # usage: tsdate {unix timestamp}
 # example: tsdate 1606857140
 tsdate() {
