@@ -2,6 +2,7 @@
 	aliases = config --get-regexp alias
 	amend = commit --amend --date=now
 	ammend = commit --amend --date=now
+	br = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
 	c = clone --recursive
 	chekcout = checkout
 	co = checkout
@@ -11,7 +12,10 @@
 	f = fetch --tags --all
 	lg = log --graph --date=relative --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %C(yellow)(%an %ad)%Creset'
 	p = pull --tags --recurse-submodules
+	s = status
+	undo = reset HEAD~1 --mixed
 	unstage = reset HEAD
+	up = push origin HEAD
 [branch]
 	autosetupmerge = true
 	autosetuprebase = always
