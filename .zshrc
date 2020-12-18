@@ -73,7 +73,6 @@ dkill() {
 	docker ps -a -f status=running | grep $1 | awk '{ print $1 }' | xargs docker kill
 }
 
-
 ts() {
   date +"%s"
 }
@@ -99,6 +98,9 @@ millidate() {
 export HISTFILE=$HOME/.zsh_history # fix history
 bindkey "\e\eOD" backward-word # fix moving cursor by word in intellij terminal
 bindkey "\e\eOC" forward-word # fix moving cursor by word in intellij terminal
+
+# https://github.com/nvbn/thefuck
+eval $(thefuck --alias)
 
 # machine specific setup post zshrc:
 [ -e "$HOME/post.zshrc" ] && source ~/post.zshrc
