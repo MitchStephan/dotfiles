@@ -11,7 +11,8 @@
 	delete-unmerged = "!git branch --no-merged | egrep -v '(^\\*|master|main)' | xargs git branch -D"
 	f = fetch --tags --all
 	lg = log --graph --date=relative --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %C(yellow)(%an %ad)%Creset'
-	p = pull --tags --recurse-submodules
+	p = pull
+	pall = pull --tags --recurse-submodules
 	s = status
 	undo = reset HEAD~1 --mixed
 	unstage = reset HEAD
@@ -19,10 +20,25 @@
 [branch]
 	autosetupmerge = true
 	autosetuprebase = always
+[color]
+	ui = true
+[color "diff"] # https://github.com/so-fancy/diff-so-fancy
+	meta = 11
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[color "diff-highlight"] # https://github.com/so-fancy/diff-so-fancy
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
 [core]
 	editor = code --wait
 	untrackedCache = true
 	whitespace = -trailing-space
+	pager = diff-so-fancy | less --tabs=4 -RFX # https://github.com/so-fancy/diff-so-fancy
 [diff]
 	renames = copy
 	tool = vscode
