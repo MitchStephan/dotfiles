@@ -14,7 +14,7 @@
 	lg = log --graph --date=relative --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %C(yellow)(%an %ad)%Creset'
 	p = pull
 	pall = pull --tags --recurse-submodules
-	rebase = pull --rebase origin master
+	prebase = pull --rebase origin master
 	s = status
 	undo = reset HEAD~1 --mixed
 	unstage = reset HEAD
