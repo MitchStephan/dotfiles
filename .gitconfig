@@ -15,11 +15,11 @@
 	p = pull --prune
 	pall = pull --prune --tags --recurse-submodules
 	prebase = pull --rebase origin master
+	push = push origin HEAD
 	s = status
 	undo = reset HEAD~1 --mixed
 	unstage = reset HEAD
-	push = push origin HEAD
-	wip = commit -am 'wip'
+	wip = !git add -A && git commit -m 'wip'
 [branch]
 	autosetupmerge = true
 	autosetuprebase = always
