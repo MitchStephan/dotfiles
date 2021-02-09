@@ -19,6 +19,7 @@
 	undo = reset HEAD~1 --mixed
 	unstage = reset HEAD
 	push = push origin HEAD
+	wip = commit -am 'wip'
 [branch]
 	autosetupmerge = true
 	autosetuprebase = always
