@@ -12,6 +12,7 @@
 	f = fetch --tags --all
 	irebase = git rebase -i 
 	lg = log --graph --date=relative --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %C(yellow)(%an %ad)%Creset'
+	lg-self = lg --author='Mitch Stephan'
 	p = pull --prune
 	pall = pull --prune --tags --recurse-submodules
 	prebase = pull --rebase origin master
