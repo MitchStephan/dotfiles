@@ -64,7 +64,7 @@ fi
 # alises
 alias dotfiles="cd ~/dotfiles"
 alias vi="vim"
-alias dc="docker-compose"
+alias dc="docker compose"
 alias alpha="echo a b c d e f g h i j k l m n o p q r s t u v w x y z"
 
 # usage: dkill {container name excerpt}
