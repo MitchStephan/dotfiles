@@ -94,6 +94,15 @@ millidate() {
 	date -u -r $(( ($1 + 500) / 1000 )) +"%Y-%m-%d %H:%M:%S %Z" 
 }
 
+# sources env variables for an aws profile
+# usage: aws_profile {profile name}
+aws_profile() {
+  export AWS_ACCESS_KEY_ID=$(aws configure get aws_access_key_id --profile $1);
+  export AWS_SECRET_ACCESS_KEY=$(aws configure get aws_secret_access_key --profile $1);
+  export AWS_DEFAULT_REGION=$(aws configure get region --profile $1);
+  echo "$1 environment variables exported";
+}
+
 # intellij fixes
 export HISTFILE=$HOME/.zsh_history # fix history
 bindkey "\e\eOD" backward-word # fix moving cursor by word in intellij terminal
