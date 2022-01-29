@@ -11,7 +11,7 @@ zsh_source_dotfile "pre.zshrc"
 export ZSH="$HOME/.oh-my-zsh"
 
 # install spaceship prompt
-zsh_source_dotfile "spaceship_prompt.zshrc"
+# zsh_source_dotfile "spaceship_prompt.zshrc"
 
 # oh-my-zsh settings
 HYPHEN_INSENSITIVE="true"
@@ -90,3 +90,6 @@ bindkey "\e\eOC" forward-word # fix moving cursor by word in intellij terminal
 
 # install machine specific setup post zshrc:
 zsh_source_dotfile "post.zshrc"
+
+# starship prompt (https://github.com/starship/starship)
+eval "$(starship init zsh)"
