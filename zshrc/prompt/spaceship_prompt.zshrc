@@ -1,4 +1,8 @@
-ZSH_THEME="spaceship" # https://github.com/denysdovhan/spaceship-prompt
+# https://github.com/denysdovhan/spaceship-prompt
+
+# ohmyzsh plugin settings
+ZSH_THEME="spaceship"
+
 SPACESHIP_PROMPT_ORDER=(
   dir           # Current directory section
   git           # Git section (git_branch + git_status)
