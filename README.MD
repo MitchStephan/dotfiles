@@ -4,8 +4,8 @@ This my own variant of a dotfiles repo. This repo does not install dependencies 
 
 
 ### Supported dotfiles
-- `.zshrc`
 - `.gitconfig`
+- `.zshrc`
 
 ### Usage
 Backup existing (if exists) and install dotfile:  

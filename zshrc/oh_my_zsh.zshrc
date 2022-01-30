@@ -19,6 +19,6 @@ plugins=(
 
 # source prompt before starting oh-my-zsh
 # source $DOTFILES/zshrc/prompt/spaceship_prompt.zshrc
-source $DOTFILES/zshrc/prompt/starship_prompt.zshrc
+source $DOTFILES/zshrc/prompt/starship/starship_prompt.zshrc
 
 source $ZSH/oh-my-zsh.sh
