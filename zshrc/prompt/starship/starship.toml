@@ -1,3 +1,8 @@
+# https://starship.rs/config
+
+command_timeout = 1000
+scan_timeout = 500
+
 format = """
 $username\
 $hostname\
@@ -70,6 +75,7 @@ $character"""
 [aws]
 disabled = true
 format = "(on [$symbol$profile]($style) )"
+symbol = "  "
 
 [battery]
 disabled = true
@@ -115,6 +121,12 @@ disabled = true
 
 [gcloud]
 disabled = true
+
+[git_branch]
+truncation_length = 35
+
+[git_status]
+stashed = ""
 
 [golang]
 disabled = true
