@@ -3,6 +3,7 @@
 command_timeout = 1000
 scan_timeout = 500
 
+# started from default format and moved modules around
 format = """
 $username\
 $hostname\
