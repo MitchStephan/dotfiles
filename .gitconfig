@@ -39,7 +39,7 @@
 	newNormal = green bold
 	newHighlight = green bold 22
 [core]
-	editor = code --wait
+	editor = nvim
 	untrackedCache = true # git optimizaton for monorepos
 	whitespace = -trailing-space
 	pager = diff-so-fancy | less --tabs=4 -RFX # https://github.com/so-fancy/diff-so-fancy
