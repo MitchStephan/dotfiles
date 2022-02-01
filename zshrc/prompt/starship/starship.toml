@@ -7,60 +7,18 @@ scan_timeout = 500
 format = """
 $username\
 $hostname\
-$shlvl\
-$singularity\
-$kubernetes\
 $directory\
-$vcsh\
 $git_branch\
 $git_commit\
 $git_state\
 $git_metrics\
 $git_status\
-$hg_branch\
 $docker_context\
-$package\
-$cmake\
-$cobol\
-$dart\
-$deno\
-$dotnet\
-$elixir\
-$elm\
-$erlang\
 $golang\
-$helm\
-$java\
-$julia\
-$kotlin\
-$lua\
-$nim\
 $nodejs\
-$ocaml\
-$perl\
-$php\
-$pulumi\
-$purescript\
-$python\
-$rlang\
-$red\
-$ruby\
-$rust\
-$scala\
-$swift\
-$terraform\
-$vlang\
-$vagrant\
-$zig\
-$nix_shell\
-$conda\
 $memory_usage\
 $aws\
-$gcloud\
-$openstack\
-$azure\
 $env_var\
-$crystal\
 $custom\
 $sudo\
 $cmd_duration\
@@ -79,6 +37,9 @@ format = "(on [$symbol$profile]($style) )"
 symbol = "  "
 
 [battery]
+disabled = true
+
+[cmake]
 disabled = true
 
 [cobol]
@@ -202,6 +163,9 @@ disabled = true
 disabled = true
 
 [scala]
+disabled = true
+
+[singularity]
 disabled = true
 
 [swift]
