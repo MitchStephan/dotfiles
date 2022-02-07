@@ -1,3 +1,6 @@
+# shell startup profile (see corresponding line at end of .zshrc)
+# zmodload zsh/zprof
+
 # usage: load_dotfile {filename}
 load_dotfile() {
   [ -e "$HOME/$1" ] && source ~/$1
@@ -15,3 +18,6 @@ bindkey "\e\eOC" forward-word # fix moving cursor by word in intellij terminal
 
 # install machine specific setup post zshrc
 load_dotfile "post.zshrc"
+
+# shell startup profiler
+# zprof
