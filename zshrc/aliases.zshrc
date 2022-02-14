@@ -1,5 +1,6 @@
 alias alpha="echo a b c d e f g h i j k l m n o p q r s t u v w x y z"
 alias dc="docker-compose"
+alias dotfiles="cd $DOTFILES"
 alias vi="vim"
 
 # prefer exa over ls & ll for colors and better info

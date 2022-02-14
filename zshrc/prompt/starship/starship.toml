@@ -1,6 +1,6 @@
 # https://starship.rs/config
 
-command_timeout = 1000
+command_timeout = 1500
 scan_timeout = 500
 
 # started from default format and moved modules around
@@ -85,7 +85,7 @@ disabled = true
 disabled = true
 
 [git_branch]
-truncation_length = 35
+truncation_length = 45
 
 [git_status]
 stashed = ""
