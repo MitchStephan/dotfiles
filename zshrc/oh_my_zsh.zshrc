@@ -8,7 +8,7 @@ HIST_STAMPS="yyyy-mm-dd" # three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 
 plugins=(
   # oh-my-zsh core plugins (~/.oh-my-zsh/plugins/)
-  copydir # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/copydir
+  copypath # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/copypath
   sudo # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/sudo
   z # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/z
 
