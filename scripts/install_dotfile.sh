@@ -6,6 +6,7 @@
 # dotfile => install directory
 declare -A dotfile_map=(
   ".gitconfig" "$HOME"
+  ".tmux.conf" "$HOME"
   ".zshrc" "$HOME"
 )
 

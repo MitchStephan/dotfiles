@@ -5,6 +5,7 @@ This is my own variant of a dotfiles repo. This repo does not install dependenci
 
 ### Supported dotfiles
 - `.gitconfig`
+- `.tmux.conf`
 - `.zshrc`
 
 ### Usage
