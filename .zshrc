@@ -6,17 +6,17 @@ load_dotfile() {
   [ -e "$HOME/$1" ] && source ~/$1
 }
 
-# install machine specific setup pre zshrc (pre.zshrc defines $DOTFILES)
+# [required] load machine specific setup `~/pre.zshrc` file (defines $DOTFILES)
 load_dotfile "pre.zshrc"
 
-source "$DOTFILES/zshrc/zshrc.zshrc"
+source "$DOTFILES/zshrc/main.zshrc"
 
 # intellij fixes
 export HISTFILE=$HOME/.zsh_history # fix history
 bindkey "\e\eOD" backward-word # fix moving cursor by word in intellij terminal
 bindkey "\e\eOC" forward-word # fix moving cursor by word in intellij terminal
 
-# install machine specific setup post zshrc
+# [optional] load machine specific setup `~/post.zshrc` file
 load_dotfile "post.zshrc"
 
 # shell startup profiler

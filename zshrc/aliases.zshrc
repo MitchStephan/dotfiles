@@ -4,6 +4,7 @@ alias dotfiles="cd $DOTFILES"
 alias vi="vim"
 
 # prefer exa over ls & ll for colors and better info
+# install: brew install exa
 if [ -x "$(command -v exa)" ]; then
 	alias ll="ls" # ll => ls => exa
 	alias ls="exa -a --long --header --group-directories-first"

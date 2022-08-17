@@ -1,3 +1,8 @@
+# usage: try_src {filepath}
+try_src() {
+  [ -e "$1" ] && source $1
+}
+
 # usage: dkill {container name excerpt}
 # example: dkill db
 dkill() {

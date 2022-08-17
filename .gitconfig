@@ -26,7 +26,7 @@
 	autosetuprebase = always
 [color]
 	ui = true
-[color "diff"] # https://github.com/so-fancy/diff-so-fancy
+[color "diff"] # https://github.com/so-fancy/diff-so-fancy --- brew install diff-so-fancy
 	meta = 11
 	frag = magenta bold
 	commit = yellow bold
