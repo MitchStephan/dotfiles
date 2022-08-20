@@ -13,11 +13,14 @@
 	irebase = git rebase -i 
 	lg = log --graph --date=relative --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %C(yellow)(%an %ad)%Creset'
 	lg-self = lg --author='Mitch Stephan'
+	lgg = log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+	lggg = log --oneline --color --graph --decorate --all
 	p = pull
 	pall = pull --prune --tags --recurse-submodules
 	prebase = pull --rebase origin master
 	push = push origin HEAD
 	s = status
+	shove = push --force-with-lease --force-if-includes origin HEAD
 	undo = reset HEAD~1 --mixed
 	unstage = reset HEAD
 	wip = !git add -A && git commit -m 'wip'
@@ -66,10 +69,12 @@
 	keepBackup = false
 [pull]
 	ff = only
+	rebase = true
 [push]
 	default = current
 [rebase]
 	abbreviateCommands = true
+	autoStash = true
 [rerere]
 	autoUpdate = false
 	enabled = false
