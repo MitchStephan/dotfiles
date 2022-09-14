@@ -9,6 +9,11 @@ dkill() {
 	docker ps -a -f status=running | grep $1 | awk '{ print $1 }' | xargs docker kill
 }
 
+# kill all running docker containers
+dkillall() {
+  docker ps -q | xargs docker kill
+}
+
 # https://github.com/sj14/epoch is a better version of this
 ts() {
   date +"%s"
@@ -31,4 +36,13 @@ tsdate() {
 # https://github.com/sj14/epoch is a better version of this
 millidate() {
 	date -u -r $(( ($1 + 500) / 1000 )) +"%Y-%m-%d %H:%M:%S %Z" 
+}
+
+loop() {
+  seconds=$1
+  shift
+  while true; do
+    "$@"
+    sleep $seconds
+  done
 }
