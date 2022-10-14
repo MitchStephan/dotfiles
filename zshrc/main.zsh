@@ -1,6 +1,6 @@
-source $DOTFILES/zshrc/aliases.zshrc
-source $DOTFILES/zshrc/exports.zshrc
-source $DOTFILES/zshrc/functions.zshrc
+source $DOTFILES/zshrc/aliases.zsh
+source $DOTFILES/zshrc/exports.zsh
+source $DOTFILES/zshrc/functions.zsh
 
 # history settings
 export SAVEHIST=10000         # number of commands that are stored in the zsh history file
@@ -11,7 +11,7 @@ setopt hist_ignore_all_dups   # ignore duplicated commands history list
 setopt hist_ignore_space      # ignore commands that start with space
 
 # load prompt
-source $DOTFILES/zshrc/prompt/starship/starship_prompt.zshrc
+source $DOTFILES/zshrc/prompt/starship/starship_prompt.zsh
 
 # to install: brew install sh-syntax-highlighting
 try_src /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

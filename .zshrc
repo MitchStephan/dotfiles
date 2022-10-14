@@ -9,7 +9,7 @@ load_dotfile() {
 # [required] load machine specific setup `~/pre.zshrc` file (defines $DOTFILES)
 load_dotfile "pre.zshrc"
 
-source "$DOTFILES/zshrc/main.zshrc"
+source "$DOTFILES/zshrc/main.zsh"
 
 # intellij fixes
 export HISTFILE=$HOME/.zsh_history # fix history
