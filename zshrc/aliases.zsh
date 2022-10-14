@@ -3,6 +3,10 @@ alias dc="docker-compose"
 alias dotfiles="cd $DOTFILES"
 alias vi="vim"
 
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+
 # prefer exa over ls & ll for colors and better info
 # install: brew install exa
 if [ -x "$(command -v exa)" ]; then
