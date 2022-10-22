@@ -3,6 +3,7 @@ alias dc="docker-compose"
 alias dotfiles="cd $DOTFILES"
 alias vi="vim"
 
+# prefer zoxide (z) over cd
 if [ -x "$(command -v z)" ]; then
 	alias cd="z" # (z => zoxide)
 fi
@@ -18,4 +19,9 @@ if [ -x "$(command -v exa)" ]; then
 	alias tree="exa -a --long --header --group-directories-first --tree --level 2"
 else
 	alias ll="ls -al"
+fi
+
+# prefer bat over cat
+if [ -x "$(command -v bat)" ]; then
+	alias cat="bat" # (use cat -p for normal cat behavior)
 fi
