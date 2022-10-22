@@ -3,6 +3,9 @@ alias dc="docker-compose"
 alias dotfiles="cd $DOTFILES"
 alias vi="vim"
 
+if [ -x "$(command -v z)" ]; then
+	alias cd="z" # (z => zoxide)
+fi
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."

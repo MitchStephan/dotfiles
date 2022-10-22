@@ -21,3 +21,5 @@ try_src /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # to install: brew install fzf
 source $DOTFILES/zshrc/fzf.zsh
+
+type zoxide &> /dev/null && eval "$(zoxide init zsh)"
