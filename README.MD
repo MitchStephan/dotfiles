@@ -1,12 +1,12 @@
 # Dotfiles
 
-This is my own variant of a dotfiles repo. This repo does not install dependencies (I haven't needed to setup machines enough to do this yet), it only documents dependencies and manages shared configuration files.
-
 ### Set Up
-1. install homebrew and git
-1. clone this repo
-1. create machine specific setup `~/pre.zshrc` file (defines `$DOTFILES`)
-1. install dotfile via `./scripts/install_dotfile.sh {dotfile}`
+1. install homebrew via `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+2. install git via `brew install git`
+3. clone this repo
+4. install brew bundle via `brew bundle install`
+5. create machine specific setup `~/pre.zshrc` file (it should at least export the `$DOTFILES` env variable)
+6. install dotfile via `./scripts/install_dotfile.sh {dotfile}`
 
 ### Supported dotfiles
 - `.gitconfig`
