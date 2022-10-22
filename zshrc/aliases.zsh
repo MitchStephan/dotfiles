@@ -23,7 +23,7 @@ else
 fi
 
 # prefer bat over cat
-# brew install cat
+# brew install bat
 if [ -x "$(command -v bat)" ]; then
 	alias cat="bat" # (use cat -p for normal cat behavior)
 fi
