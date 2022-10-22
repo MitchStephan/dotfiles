@@ -4,6 +4,7 @@ alias dotfiles="cd $DOTFILES"
 alias vi="vim"
 
 # prefer zoxide (z) over cd
+# install: brew install zoxide
 if [ -x "$(command -v z)" ]; then
 	alias cd="z" # (z => zoxide)
 fi
@@ -22,6 +23,7 @@ else
 fi
 
 # prefer bat over cat
+# brew install cat
 if [ -x "$(command -v bat)" ]; then
 	alias cat="bat" # (use cat -p for normal cat behavior)
 fi
