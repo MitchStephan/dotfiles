@@ -1,4 +1,3 @@
-# homebrew taps
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
