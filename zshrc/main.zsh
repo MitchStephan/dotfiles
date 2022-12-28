@@ -24,3 +24,16 @@ source $DOTFILES/zshrc/fzf.zsh
 
 # to install: brew install zoxide
 type zoxide &> /dev/null && eval "$(zoxide init zsh)"
+
+# intellij fixes
+export HISTFILE=$HOME/.zsh_history # fix history
+bindkey "\e\eOD" backward-word # fix moving cursor by word in intellij terminal
+bindkey "\e\eOC" forward-word # fix moving cursor by word in intellij terminal
+
+# setup tab completion (re-init once per day), source: https://gist.github.com/ctechols/ca1035271ad134841284?permalink_comment_id=3994613#gistcomment-3994613
+autoload -Uz compinit
+for dump in ~/.zcompdump(N.mh+24); do
+  echo "initializing completion"
+  compinit
+done
+compinit -C
