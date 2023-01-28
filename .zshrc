@@ -16,3 +16,4 @@ load_dotfile "post.zshrc"
 
 # shell startup profiler
 # zprof
+

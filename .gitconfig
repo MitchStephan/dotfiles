@@ -60,6 +60,11 @@
 [help]
 	autocorrect = 1
 [include]
+	# import local gitconfig settings
+	# at minimum, should include user settings, example:
+	# [user]
+	# 	name="name"
+	# 	email="email@email.com"
 	path = ~/local.gitconfig
 [merge]
 	log = true

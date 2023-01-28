@@ -14,13 +14,13 @@ setopt hist_ignore_space      # ignore commands that start with space
 source $DOTFILES/zshrc/prompt/starship/starship_prompt.zsh
 
 # to install: brew install sh-syntax-highlighting
-try_src /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+try_src $BREWHOME/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # to install: brew install zsh-autosuggestions
-try_src /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+try_src $BREWHOME/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# to install: brew install fzf
-source $DOTFILES/zshrc/fzf.zsh
+# https://github.com/junegunn/fzf to install: brew install fzf
+try_src ~/.fzf.zsh
 
 # to install: brew install zoxide
 type zoxide &> /dev/null && eval "$(zoxide init zsh)"
