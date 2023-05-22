@@ -2,10 +2,12 @@
 	aliases = config --get-regexp alias
 	amend = commit --amend --date=now
 	ammend = commit --amend --date=now
+	base = !echo $(git branch -l master main | sed -r 's/^[* ] //' | head -n 1)
 	br = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
 	c = clone --recursive
 	chekcout = checkout
 	co = checkout
+	cobase = !git checkout $(git base)
 	d = difftool
 	delete-merged = "!git branch --merged | egrep -v '(^\\*|master|main)' | xargs git branch -d"
 	delete-unmerged = "!git branch --no-merged | egrep -v '(^\\*|master|main)' | xargs git branch -D"
@@ -17,8 +19,9 @@
 	lggg = log --oneline --color --graph --decorate --all
 	p = pull
 	pall = pull --prune --tags --recurse-submodules
-	ro = !git pull --rebase origin $(git branch -l master main | sed -r 's/^[* ] //' | head -n 1)
 	push = push origin HEAD
+	reorigin = ro
+	ro = !git pull --rebase origin $(git base)
 	s = status
 	shove = push --force-with-lease --force-if-includes origin HEAD
 	undo = reset HEAD~1 --mixed
