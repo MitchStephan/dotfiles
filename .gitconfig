@@ -3,7 +3,7 @@
 	amend = commit --amend --date=now
 	ammend = commit --amend --date=now
 	base = !git checkout $(git get-base)
-	br = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
+	branches = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
 	c = clone --recursive
 	chekcout = checkout
 	co = checkout
