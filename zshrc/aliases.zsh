@@ -12,12 +12,12 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 
-# prefer exa over ls & ll for colors and better info
-# install: brew install exa
-if [ -x "$(command -v exa)" ]; then
+# prefer eza over ls & ll for colors and better info
+# install: brew install eza
+if [ -x "$(command -v eza)" ]; then
 	alias ll="ls" # ll => ls => exa
-	alias ls="exa -a --long --header --group-directories-first"
-	alias tree="exa -a --long --header --group-directories-first --tree --level 2"
+	alias ls="eza -a --long --header --group-directories-first"
+	alias tree="eza -a --long --header --group-directories-first --tree --level 2"
 else
 	alias ll="ls -al"
 fi
