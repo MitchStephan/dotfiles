@@ -15,7 +15,7 @@ alias ....="cd ../../.."
 # prefer eza over ls & ll for colors and better info
 # install: brew install eza
 if [ -x "$(command -v eza)" ]; then
-	alias ll="ls" # ll => ls => exa
+	alias ll="ls" # ll => ls => eza
 	alias ls="eza -a --long --header --group-directories-first"
 	alias tree="eza -a --long --header --group-directories-first --tree --level 2"
 else
