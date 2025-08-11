@@ -21,6 +21,8 @@ $aws\
 $env_var\
 $custom\
 $sudo\
+$terraform\
+$kubernetes\
 $cmd_duration\
 $time\
 $line_break\
@@ -107,6 +109,13 @@ disabled = true
 
 [kubernetes]
 disabled = true
+symbol = "☸ "
+contexts = [
+  { context_pattern = ".*prod.*", style = "bold red" },
+  { context_pattern = ".*production.*", style = "bold red" }
+]
+# Hide if no context found
+format = '[$symbol$context(::$namespace)]($style) '
 
 [lua]
 disabled = true
@@ -173,6 +182,9 @@ disabled = true
 
 [terraform]
 disabled = true
+symbol = "🛠 "
+format = '[$symbol $workspace]($style) '
+style = 'purple'
 
 [vagrant]
 disabled = true

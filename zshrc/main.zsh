@@ -39,3 +39,6 @@ if [ $(find $HOME/.zcompdump -mtime +1 | wc -l) -gt 0 ]; then
 else
   compinit -C
 fi
+
+# install kube tools (after compinit)
+try_src $DOTFILES/zshrc/kubetools.zsh

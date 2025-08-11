@@ -17,3 +17,4 @@ load_dotfile "post.zshrc"
 # shell startup profiler
 # zprof
 
+export PATH=/Users/mitch.stephan/development/application-infrastructure/.venv/bin:$PATH
