@@ -11,7 +11,8 @@
 	d = difftool
 	delete-merged = "!git branch --merged | egrep -v '(^\\*|master|main)' | xargs git branch -d"
 	delete-unmerged = "!git branch --no-merged | egrep -v '(^\\*|master|main)' | xargs git branch -D"
-	f = fetch --tags --all
+	f = fetch --prune --all
+	fall = fetch --prune --tags --all
 	get-base = !echo $(git branch -l master main | sed -r 's/^[* ] //' | head -n 1)
 	irebase = git rebase -i 
 	lg = log --graph --date=relative --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %C(yellow)(%an %ad)%Creset'
@@ -22,6 +23,7 @@
 	pall = pull --prune --tags --recurse-submodules
 	push = push origin HEAD
 	reorigin = ro
+	review = "!f() { git fetch --no-tags origin \"$1\" && { git switch -c \"review/$1\" --track \"origin/$1\" 2>/dev/null || git switch \"review/$1\"; } && { AHEAD=$(git rev-list --count \"origin/$1\"..HEAD 2>/dev/null); if [ \"$AHEAD\" -gt 0 ]; then echo \"Heads up: review/$1 is $AHEAD commit(s) ahead of origin/$1. Run: git reset --hard origin/$1\"; else git reset --hard \"origin/$1\"; fi; }; }; f"
 	ro = !git pull --rebase origin $(git get-base)
 	s = status
 	shove = push --force-with-lease --force-if-includes origin HEAD
@@ -51,9 +53,12 @@
 	whitespace = -trailing-space
 	pager = diff-so-fancy | less --tabs=4 -RFX # https://github.com/so-fancy/diff-so-fancy
 	splitIndex = true # git optimization for monorepos
+	fsmonitor = true # file system monitor daemon for large repos
+	version = 4 # upgrade index format compression
 [diff]
 	renames = copy
 	tool = vscode
+	algorithm = histogram # better diffs for files with repeated content
 [difftool]
 	prompt = false
 [difftool "vscode"]
@@ -61,6 +66,9 @@
 [fetch]
 	prune = true
 	pruneTags = true
+	tags = false
+	writeCommitGraph = true # speed up log/push/rebase operations
+	parallel = 4 # parallelize remote object fetching
 [help]
 	autocorrect = 1
 [include]
@@ -87,5 +95,7 @@
 [rerere]
 	autoUpdate = false
 	enabled = false
+[transfer]
+	threads = 4 # parallelize compression/packing on push/fetch
 [url "git@github.com:"]
 	insteadOf = https://github.com/
